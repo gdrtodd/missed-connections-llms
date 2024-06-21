@@ -19,8 +19,7 @@ def solve_puzzle(puzzle_id_and_seed: typing.Tuple[int, int],
     if openai_key is None:
         raise ValueError("Error: OPENAI_TOKEN/OPENAI_API_KEY environment variable is not set")
 
-    oraganization = os.environ.get("OPENAI_ORGANIZATION")
-    openai_client = OpenAI(api_key=openai_key, organization=oraganization)
+    openai_client = OpenAI(api_key=openai_key)
     
     solver = solver_type(openai_client, llm_name, chain_of_thought=chain_of_thought)
 

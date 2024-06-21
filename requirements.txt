@@ -1,1 +1,8 @@
+backoff
+numpy
 openai
+sentence-transformers
+scikit-learn
+scipy
+tabulate
+tqdm
